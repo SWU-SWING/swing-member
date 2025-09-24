@@ -16,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-/* 기본 레이아웃 */
+
 .container-main {
   width: 100%;
   height: 100vh;
@@ -40,10 +40,6 @@ body {
   padding: 100px;
 }
 
-/* 검색 폰트 */
-.Search {
-  font-family: DungGeunMo, sans-serif;
-}
 .main-title {
   margin: 60px 0 30px;
   font-size: 30px;
@@ -53,7 +49,6 @@ body {
   text-align: left;
   padding-left: 65px;
 }
-/* 모달 */
 .custom-modal {
   position: fixed;
   top: 0;
@@ -95,7 +90,6 @@ body {
   cursor: pointer;
 }
 
-/* 카드 */
 .custom-card {
   display: flex;
   flex-direction: column;
@@ -110,7 +104,7 @@ body {
 
 .custom-card .card-body {
   position: relative;
-  z-index: 2; /* ground 위로 올라오게 */
+  z-index: 2;
   background: transparent;
   padding: 5px;
   padding-left: 20px;
@@ -125,8 +119,8 @@ body {
   left: 0;
   width: 100%;
 
-  object-fit: contain; /* 비율 유지 */
-  z-index: 1;           /* 배경 레이어로 */
+  object-fit: contain;
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -223,7 +217,6 @@ body {
   border-radius: 5px;
 }
 
-/* 이모지 */
 .emogi-icon {
   width: 15px;
 }
@@ -352,7 +345,6 @@ body {
   display: inline-block;
   height: 6px;
   border-radius: 20px;
-  /*cursor: pointer;*/
   position: relative;
   z-index: 14;
   pointer-events: auto;
@@ -365,7 +357,6 @@ body {
   object-fit: cover;
 }
 
-/* 툴팁 컨테이너 */
 .tooltip {
   visibility: hidden;
   opacity: 0;
@@ -391,7 +382,6 @@ body {
   line-height: 1.4;
 }
 
-/* 툴팁 이미지 */
 .tooltip-img {
   width: 16px;
   height: 16px;
@@ -400,14 +390,12 @@ body {
   margin-bottom: 3px;
 }
 
-/* 툴팁 텍스트 */
 .tooltip-text {
   font-size: 13px;
   font-weight: 500;
   color: black;
 }
 
-/* 툴팁 화살표 */
 .tooltip::after {
   content: '';
   position: absolute;
@@ -418,13 +406,11 @@ body {
   border-top-color: #e8e8e8;
 }
 
-/* 마우스오버 시 툴팁 표시 */
 .status-bar:hover .tooltip {
   opacity: 1;
   visibility: visible;
 }
 
-/* 디버깅용 - 마우스오버 시 이미지 색상 변경으로 호버 작동 확인 */
 .status-bar:hover .status-img {
   filter: brightness(1.3);
 }
@@ -444,7 +430,6 @@ body {
   position: relative;
   border-right: 2px solid rgb(109, 172, 22);
 }
-
 
 .mp-bar {
   background: linear-gradient(180deg, #4444ff 0%, #2222cc 50%, #4444ff 100%);
@@ -472,8 +457,6 @@ body {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
 }
 
-/* ========== 모달 프로필 스타일 ========== */
-/* 모달 전용 스타일 - 네임스페이스 추가 */
 .modal-profile-container {
   margin: 0;
   padding: 0;
@@ -498,7 +481,6 @@ body {
   gap: 10px;
 }
 
-/* 프로필 사이드바 */
 .modal-profile-sidebar {
   position: sticky;
   top: 20px;
@@ -622,7 +604,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 14px; /* 부모의 border-radius보다 1px 작게 */
+  border-radius: 14px;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
@@ -634,7 +616,6 @@ body {
   object-fit: contain;
 }
 
-/* 메인 컨텐츠 */
 .modal-main-content {
   min-height: 100vh;
   z-index: 9999;
@@ -1011,7 +992,6 @@ body {
   visibility: visible;
   opacity: 1;
 }
-/* 애니메이션 넣기 */
 @keyframes showToolTip {
   0% {
     opacity: 0;
@@ -1027,19 +1007,21 @@ body {
   animation: showToolTip 0.3s ease forwards;
 }
 @media (max-width: 770px) {
-
   html, body {
-    overflow-x: hidden; /* 좌우 스크롤 차단 */
+    overflow-x: hidden;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
   }
 
   .container {
-    max-width: 100%; /* 부모 너비에 맞추기 */
-    padding-left: 1rem;  /* 좌우 여백 */
+    max-width: 100%;
+    padding-left: 1rem; 
     padding-right: 1rem;
   }
 
   .row {
-    margin-left: 0;   /* 부트스트랩 기본 음수 마진 제거 */
+    margin-left: 0;
     margin-right: 0;
   }
 
@@ -1049,18 +1031,18 @@ body {
   }
 
   .custom-card {
-    width: 100%;      /* 카드 가로 꽉 채우기 */
-    height: auto;     /* 높이는 내용에 맞추기 */
+    width: 100%; 
+    height: auto; 
   }
 
   .custom-card img {
-    width: 100%;      /* 이미지도 가로 꽉 채우기 */
-    height: auto;     /* 비율 유지 */
+    width: 100%; 
+    height: auto;
     object-fit: cover;
   }
 
   .card-body {
-    width: 100%;      /* 카드 내용 영역도 꽉 채우기 */
+    width: 100%;
   }
 
   .status-container {
@@ -1077,11 +1059,11 @@ body {
     top: 0 !important;
     left: 0 !important;
     transform: none !important;
-    position: fixed !important; /* 고정 */
+    position: fixed !important;
   }
 
   .modal-profile-header{
-    overflow-x: hidden; /* 좌우 스크롤 차단 */
+    overflow-x: hidden; 
   }
 
 }
