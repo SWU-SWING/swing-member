@@ -57,13 +57,6 @@ body {
   align-items: center;
   z-index: 12;
 }
-.btn-close-modal {
-  background-color: rgba(255, 255, 255, 0);
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 .custom-card {
   display: flex;
   flex-direction: column;
