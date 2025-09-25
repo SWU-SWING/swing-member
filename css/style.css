@@ -1010,11 +1010,11 @@ body {
 
   .container {
     max-width: 100%;
-    padding: 1rem;
+    padding: 1rem !important;
   }
   .container-main {
     height: auto !important;
-    padding-top: 20px !important; 
+    padding-top: 70px !important; 
   }
 
   .row {
@@ -1023,7 +1023,7 @@ body {
   }
 
   .gradient-main {
-    padding-top: 20px !important;
+    padding-top: 70px !important;
   }
 
   .row {
