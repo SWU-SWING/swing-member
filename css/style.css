@@ -1003,14 +1003,14 @@ body {
 @media (max-width: 770px) {
   html, body {
     overflow-x: hidden;
+    display: block !important;
+    justify-content: initial !important;
     background-size: contain;
-    background-position: center top;
     background-repeat: no-repeat;
   }
 
   .container {
     max-width: 100%;
-    padding: 1rem !important;
   }
   .container-main {
     height: auto !important;
