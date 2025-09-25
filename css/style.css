@@ -1018,6 +1018,12 @@ body {
     max-width: 100%;
     padding: 1rem;
   }
+  .container-main {
+    height: auto;  
+    padding-top: 20px; 
+    justify-content: flex-start; 
+    align-items: flex-start;
+  }
 
   .row {
     margin-left: 0;
@@ -1025,7 +1031,7 @@ body {
   }
 
   .gradient-main {
-    padding: 20px;
+    padding-top: 20px;
   }
 
   .row {
