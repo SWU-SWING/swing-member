@@ -288,19 +288,19 @@ body {
     overflow-x: hidden;
     display: block !important;
     justify-content: initial !important;
-    /*background-image: none;*/
+    background-image: url("../images/background-media.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
   .container {
     max-width: 100%;
-    padding-top: 70px !important;
+    padding-top: 0px !important;
   }
   .container-main {
     height: 0vh !important;
   }
   .gradient-main {
-    padding-top: 70px !important;
+    padding-top: 0px !important;
   }
   .row {
     margin-left: 0;
